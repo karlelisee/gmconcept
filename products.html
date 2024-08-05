@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+   <!--=============== SWIPER CSS ===============-->
+   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <style>
+      .products__img {
+         width: 110%;
+         height: 120%;
+         border-radius: 15px;
+      }
+
+      .products__blob {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         height: 200px;
+         overflow: hidden;
+      }
+
+      @media (max-width: 768px) {
+         .products__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+         }
+      }
+
+      .container {
+         margin: 0 auto;
+         padding: 0 20px;
+      }
+   </style>
+
+   <title>GMCONCEPT</title>
+</head>
+
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="index.html" class="nav__logo">
+            GM<span>CONCEPT</span>
+         </a>
+
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li class="nav__item"><a href="index.html" class="nav__link active-link">Accueil</a></li>
+               <li class="nav__item"><a href="products.html" class="nav__link">Produits</a></li>
+               <li class="nav__item"><a href="Panier.html" class="nav__link">Panier</a></li>
+            </ul>
+
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close">
+               <i class="ri-close-line"></i>
+            </div>
+         </div>
+
+         <div class="nav__buttons">
+            <!-- Theme change button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <!--==================== PRODUCTS ====================-->
+      <section class="products section" id="products">
+         <div class="products__container">
+            <div class="products__data">
+               <h2 class="section__title">Nos produits</h2>
+               <p class="products__description">
+                  Découvrez les maillots du moment sur notre site.
+               </p>
+            </div>
+
+            <div class="products__content">
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart.html" class="products__img">
+                        <img src="assets/img/maillot1.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot Mexique Édition Spéciale</h3>
+                  <span class="products__subtitle">2024</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>20.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart2()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart2.html" class="products__img">
+                        <img src="assets/img/maillot2.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot Concept Japon Black Dragon</h3>
+                  <span class="products__subtitle">2024</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>20.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart2()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart3.html" class="products__img">
+                        <img src="assets/img/maillot3.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot Brésil Édition Spéciale</h3>
+                  <span class="products__subtitle">2023/2024</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>20.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart3()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart5.html" class="products__img">
+                        <img src="assets/img/maillot5.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot Flamengo Édition Spéciale Rose</h3>
+                  <span class="products__subtitle">2024/2025</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>20.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart5()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+
+               <!-- <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart6.html" class="products__img">
+                        <img src="assets/img/maillot6.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot</h3>
+                  <span class="products__subtitle">2024</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>22.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart6()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article> -->
+
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart7.html" class="products__img">
+                        <img src="assets/img/maillot7.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot Concept Brésil </h3>
+                  <span class="products__subtitle">2023/2024</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>20.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart7()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart8.html" class="products__img">
+                        <img src="assets/img/maillot8.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot Concept Réal Madrid Violet</h3>
+                  <span class="products__subtitle">2024/2025</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>20.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart8()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart9.html" class="products__img">
+                        <img src="assets/img/maillot9.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot Manchester City Nouvel An Chinois</h3>
+                  <span class="products__subtitle">2024</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>20.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart9()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart10.html" class="products__img">
+                        <img src="assets/img/maillot10.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot Réal Concept Vert Turquoise</h3>
+                  <span class="products__subtitle">2024</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>22.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart10()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart11.html" class="products__img">
+                        <img src="assets/img/maillot11.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot Concept Brésil Blanc & Bleu</h3>
+                  <span class="products__subtitle">2024</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>22.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart11()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart12.html" class="products__img">
+                        <img src="assets/img/maillot12.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot Concept Japon "Sakura"</h3>
+                  <span class="products__subtitle">2024</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>22.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart12()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart13.html" class="products__img">
+                        <img src="assets/img/maillot13.JPG" alt="products image" class="products__img">
+                     </a>                  </div>
+                  <h3 class="products__name">Maillot Concept Japon</h3>
+                  <span class="products__subtitle">2024/2025</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>22.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart13()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+               <article class="products__card">
+                  <div class="products__blob">
+                     <a href="Carts/cart14.html" class="products__img">
+                     <img src="assets/img/maillot14.JPG" alt="products image" class="products__img">
+                  </a>
+                  </div>
+                  <h3 class="products__name">Maillot Concept Japon "Tokyo City"</h3>
+                  <span class="products__subtitle">2024</span>
+                  <h3 class="products__price">
+                     <span>CFA </span>22.000
+                  </h3>
+                  <button class="products__button" onclick="redirectToCart14()">
+                     <i class="ri-add-line"></i>
+                  </button>
+               </article>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== JOIN ====================-->
+      <section class="join section">
+         <div class="join__container container grid">
+            <div class="join__bg grid">
+               <div class="join__image">
+                  <div class="join__blob">
+                     <img src="assets/img/MESSI.png" alt="join image" class="join__img">
+                     <h1 class="join__blob-title"></h1>
+                  </div>
+                  <div class="join__shadow"></div>
+               </div>
+
+               <div class="join__content grid">
+                  <div class="join__data">
+                     <h2 class="section__title">Démarrez une nouvelle aventure</h2>
+                     <p class="join__description">
+                        Ne manquez rien, <br>
+                        Rejoignez nous dès maintenant
+                     </p>
+                  </div>
+
+                  <form action="" class="join__form">
+                     <input type="email" placeholder="Entrez votre mail." class="join__input">
+                     <button class="button join__button">
+                        Rejoignez la newsletter maintenant !
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container grid">
+         <div class="footer__content grid">
+            <div>
+               <a href="index.html" class="footer__logo">
+                  GM<span>CONCEPT</span>
+               </a>
+               <p class="footer__description">
+                  Nous avons comme objectif de faire <br>
+                  évoluer la vente de maillots <br>
+                  en Côte d'ivoire.
+               </p>
+            </div>
+
+            <div class="footer__data grid">
+               <div>
+                  <h3 class="footer__title">À propos</h3>
+                  <ul class="footer__links">
+                     <li><a href="index.html#choose" class="footer__link">À propos de nous</a></li>
+                     <li><a href="index.html#popular" class="footer__link">Nouveautés</a></li>
+                     <li><a href="#" class="footer__link">Blog</a></li>
+                  </ul>
+               </div>
+               <div>
+                  <h3 class="footer__title">Maillots</h3>
+                  <ul class="footer__links">
+                     <li><a href="index.html#popular" class="footer__link">Pourquoi les maillots ?</a></li>
+                     <li><a href="index.html#choose" class="footer__link">Supportez nous</a></li>
+                  </ul>
+               </div>
+               <div>
+                  <h3 class="footer__title">Entreprise</h3>
+                  <ul class="footer__links">
+                     <li><a href="index.html#choose" class="footer__link">Pourquoi les maillots</a></li>
+                     <li><a href="#" class="footer__link">Capital</a></li>
+                     <li><a href="#" class="footer__link">Sécurité</a></li>
+                  </ul>
+               </div>
+               <div>
+                  <h3 class="footer__title">Suivez nous sur <br> nos réseaux</h3>
+                  <div class="footer__social">
+                     <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-facebook-circle-line"></i>
+                     </a>
+                     <a href="https://www.instagram.com/maillot.concept/" target="_blank" class="footer__social-link">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+                     <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-twitter-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer__group">
+            <div class="footer__terms">
+               <a href="#">Termes & Conditions</a>
+               <a href="#">Politique de confidentialité</a>
+            </div>
+            <span class="footer__copy">
+               &#169; 2024, GMCONCEPT, Tout droits réservés.
+            </span>
+         </div>
+      </div>
+   </footer>
+
+   <!--========== SCROLL UP ==========-->
+   <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="assets/js/scrollreveal.min.js"></script>
+
+   <!--=============== SWIPER JS ===============-->
+   <script src="assets/js/swiper-bundle.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -92,6 +92,48 @@ const toggleItem = (item) =>{
         item.classList.add('faq-open')
     }
 }
+function redirectToCart() {
+    window.location.href = './Carts/cart.html';
+}
+function redirectToCart2() {
+    window.location.href = './Carts/cart2.html';
+}
+function redirectToCart3() {
+    window.location.href = './Carts/cart3.html';
+}
+function redirectToCart4() {
+    window.location.href = './Carts/cart4.html';
+}
+function redirectToCart5() {
+    window.location.href = './Carts/cart5.html';
+}
+function redirectToCart6() {
+    window.location.href = './Carts/cart6.html';
+}
+function redirectToCart7() {
+    window.location.href = './Carts/cart7.html';
+}
+function redirectToCart8() {
+    window.location.href = './Carts/cart8.html';
+}
+function redirectToCart9() {
+    window.location.href = './Carts/cart9.html';
+}
+function redirectToCart10() {
+    window.location.href = './Carts/cart10.html';
+}
+function redirectToCart11() {
+    window.location.href = './Carts/cart11.html';
+}
+function redirectToCart12() {
+    window.location.href = './Carts/cart12.html';
+}
+function redirectToCart13() {
+    window.location.href = './Carts/cart13.html';
+}
+function redirectToCart14() {
+    window.location.href = './Carts/cart14.html';
+}
 
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{

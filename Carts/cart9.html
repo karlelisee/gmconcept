@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="../assets/css/styles.css">
+   <title>Produit 1 | GMCONCEPT</title>
+   <style>
+      /* Style pour le modal */
+      .modal {
+         display: none; 
+         position: fixed; 
+         z-index: 1; 
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         overflow: auto; 
+         background-color: rgb(0,0,0); 
+         background-color: rgba(0,0,0,0.4); 
+         padding-top: 60px;
+      }
+      .modal-content {
+         background-color: #fefefe;
+         margin: 5% auto; 
+         padding: 20px;
+         border: 1px solid #888;
+         width: 80%; 
+         max-width: 300px;
+         text-align: center;
+         border-radius: 10px;
+      }
+      .close {
+         color: #aaa;
+         float: right;
+         font-size: 28px;
+         font-weight: bold;
+      }
+      .close:hover,
+      .close:focus {
+         color: black;
+         text-decoration: none;
+         cursor: pointer;
+      }
+   </style>
+</head>
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="index.html" class="nav__logo">GM<span>CONCEPT</span></a>
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li class="nav__item"><a href="../" class="nav__link">Accueil</a></li>
+               <li class="nav__item"><a href="../#popular" class="nav__link">Populaires</a></li>
+               <!-- <li class="nav__item"><a href="../#choose" class="nav__link">À propos</a></li>
+               <li class="nav__item"><a href="../products.html" class="nav__link">Produits</a></li> -->
+               <li class="nav__item"><a href="../Panier.html" class="nav__link">Panier</a></li>
+            </ul>
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close"><i class="ri-close-line"></i></div>
+         </div>
+         <div class="nav__buttons">
+            <!-- Theme change button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <!--==================== PANIER ====================-->
+      <section class="cart section">
+         <div class="cart__container container grid">
+            <div class="cart__image">
+               <img src="../assets/img/maillot9.JPG" alt="product image" class="cart__img">
+            </div>
+
+            <div class="cart__content">
+               <h2 class="cart__title">Maillot Manchester City Nouvel An Chinois 2023/2024</h2>
+               <p class="cart__description">
+                  Découvrez notre nouveau maillot 2024, conçu avec les meilleurs matériaux pour vous offrir confort et style sur le terrain.
+               </p>
+               
+               <div class="cart__sizes">
+                  <h3 class="cart__sizes-title">Choisir une taille:</h3>
+                  <select class="cart__sizes-select" id="sizeSelect">
+                     <option value="S">Stock Épuisé</option>
+                  </select>
+               </div>
+               <!-- <button id="addToCartButton" class="button">Ajouter au panier</button>
+               <p>ou</p>
+               <a id="whatsappButton" href="#" class="button button--whatsapp">
+                  <i class="ri-whatsapp-line"></i> Commander directement sur WhatsApp
+               </a> -->
+            </div>
+         </div>
+      </section>
+
+      <!--==================== MODAL ====================-->
+      <div id="myModal" class="modal">
+         <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Produit ajouté au panier</p>
+         </div>
+      </div>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <div class="footer__content grid">
+               <div>
+                  <a href="#" class="footer__logo">GM<span>CONCEPT</span></a>
+                  <p class="footer__description">
+                     Nous avons comme objectif de faire <br> 
+                     évoluer la vente de maillots <br> 
+                     en Côte d'ivoire.
+                  </p>
+               </div>
+               <div class="footer__data grid">
+                  <div>
+                     <h3 class="footer__title">À propos</h3>
+                     <ul class="footer__links">
+                        <li><a href="#" class="footer__link">À propos de nous</a></li>
+                        <li><a href="#" class="footer__link">Nouveautés</a></li>
+                        <li><a href="#" class="footer__link">Blog</a></li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 class="footer__title">Maillots</h3>
+                     <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Pourquoi les maillots ?</a></li>
+                        <li><a href="#" class="footer__link">Supportez nous</a></li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 class="footer__title">Entreprise</h3>
+                     <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Pourquoi les maillots</a></li>
+                        <li><a href="#" class="footer__link">Capital</a></li>
+                        <li><a href="#" class="footer__link">Sécurité</a></li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 class="footer__title">Suivez nous sur <br> nos réseaux</h3>
+                     <div class="footer__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link"><i class="ri-facebook-circle-line"></i></a>
+                        <a href="https://www.instagram.com/maillot.concept/" target="_blank" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social-link"><i class="ri-twitter-line"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__group">
+               <div class="footer__terms">
+                  <a href="#">Termes & Conditions</a>
+                  <a href="#">Politique de confidentialité</a>
+               </div>
+               <span class="footer__copy">
+                  &#169; 2024, GMCONCEPT, Tous droits réservés.
+               </span>
+            </div>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up"><i class="ri-arrow-up-line"></i></a>
+      <!--=============== MAIN JS ===============-->
+      <script src="../assets/js/main.js"></script>
+      <script>
+         document.getElementById('addToCartButton').addEventListener('click', function() {
+            var size = document.getElementById('sizeSelect').value;
+            var product = {
+               name: "Maillot Manchester City Nouvel An Chinois 2023/2024",
+               size: size,
+               price: 22000,
+               image: "../assets/img/maillot9.JPG"
+            };
+            var cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            showModal();
+         });
+
+         function showModal() {
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+
+            modal.style.display = "block";
+
+            span.onclick = function() {
+               modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+               if (event.target == modal) {
+                  modal.style.display = "none";
+               }
+            }
+
+            setTimeout(function() {
+               modal.style.display = "none";
+            }, 3000);
+         }
+
+         document.getElementById('whatsappButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            var size = document.getElementById('sizeSelect').value;
+            var message = "Bonjour ! Je souhaite commander ceci : Maillot Manchester City Nouvel An Chinois 2023/2024 en taille '" + size + "'";
+            var url = "https://wa.me/+2250787270821?text=" + encodeURIComponent(message) + "%0A%0A" + encodeURIComponent(window.location.href);
+            window.location.href = url;
+         });
+      </script>
+   </body>
+</html>

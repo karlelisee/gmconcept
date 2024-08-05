@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="../assets/css/styles.css">
+   <style>
+      .cart__item-img {
+         width: 150px;
+         height: 150px;
+         object-fit: cover;
+      }
+      @media (max-width: 768px) {
+         .cart__item-img {
+            width: 200px;
+            height: 200px;
+         }
+      }
+      .popup {
+         visibility: hidden;
+         width: 250px;
+         background-color: #333;
+         color: #fff;
+         text-align: center;
+         border-radius: 5px;
+         padding: 10px;
+         position: fixed;
+         z-index: 1;
+         bottom: 30px;
+         left: 50%;
+         transform: translateX(-50%);
+         font-size: 17px;
+      }
+      .popup.show {
+         visibility: visible;
+         animation: fadeInOut 3s ease-in-out;
+      }
+      @keyframes fadeInOut {
+         0%, 100% { opacity: 0; }
+         50% { opacity: 1; }
+      }
+   </style>
+   <title>Panier | GMCONCEPT</title>
+</head>
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="../index.html" class="nav__logo">GM<span>CONCEPT</span></a>
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li class="nav__item"><a href="../index.html#home" class="nav__link">Accueil</a></li>
+               <li class="nav__item"><a href="../products.html" class="nav__link">Produits</a></li>
+               <li class="nav__item"><a href="../Panier.html" class="nav__link">Panier</a></li>
+            </ul>
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close"><i class="ri-close-line"></i></div>
+         </div>
+         <div class="nav__buttons">
+            <!-- Theme change button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <!--==================== PANIER ====================-->
+      <section class="cart section">
+         <div class="cart__container container grid">
+            <div class="cart__image">
+               <img src="../assets/img/maillot7.JPG" alt="product image" class="cart__img">
+            </div>
+
+            <div class="cart__content">
+               <h2 class="cart__title">Maillot Concept Brésil 2023/2024</h2>
+               <p class="cart__description">
+                  Découvrez notre nouveau maillot 2024, conçu avec les meilleurs matériaux pour vous offrir confort et style sur le terrain.
+               </p>
+               
+               <div class="cart__sizes">
+                  <h3 class="cart__sizes-title">Choisir une taille:</h3>
+                  <select class="cart__sizes-select" id="sizeSelect">
+                     <option value="S">Stock épuisé</option>
+                  </select>
+               </div>
+
+               <!-- <button id="addToCartButton" class="button">Ajouter au panier</button>
+               <p>ou</p>
+               <a id="whatsappButton" href="#" class="button button--whatsapp">
+                  <i class="ri-whatsapp-line"></i> Commander sur WhatsApp
+               </a> -->
+            </div>
+         </div>
+      </section>
+
+      <div id="popup" class="popup"></div>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <div class="footer__content grid">
+               <div>
+                  <a href="#" class="footer__logo">GM<span>CONCEPT</span></a>
+                  <p class="footer__description">
+                     Nous avons comme objectif de faire <br> 
+                     évoluer la vente de maillots <br> 
+                     en Côte d'ivoire.
+                  </p>
+               </div>
+               <div class="footer__data grid">
+                  <div>
+                     <h3 class="footer__title">À propos</h3>
+                     <ul class="footer__links">
+                        <li><a href="#" class="footer__link">À propos de nous</a></li>
+                        <li><a href="#" class="footer__link">Nouveautés</a></li>
+                        <li><a href="#" class="footer__link">Blog</a></li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 class="footer__title">Maillots</h3>
+                     <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Pourquoi les maillots ?</a></li>
+                        <li><a href="#" class="footer__link">Supportez nous</a></li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 class="footer__title">Entreprise</h3>
+                     <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Pourquoi les maillots</a></li>
+                        <li><a href="#" class="footer__link">Capital</a></li>
+                        <li><a href="#" class="footer__link">Sécurité</a></li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 class="footer__title">Suivez nous sur <br> nos réseaux</h3>
+                     <div class="footer__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link"><i class="ri-facebook-circle-line"></i></a>
+                        <a href="https://www.instagram.com/maillot.concept/" target="_blank" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social-link"><i class="ri-twitter-line"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__group">
+               <div class="footer__terms">
+                  <a href="#">Termes & Conditions</a>
+                  <a href="#">Politique de confidentialité</a>
+               </div>
+               <span class="footer__copy">
+                  &#169; babiere si tu paies pas toi grâce ta tête on dirait mangue la
+               </span>
+            </div>
+         </div>
+      </footer>
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up"><i class="ri-arrow-up-line"></i></a>
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+      <script>
+         function showPopup(message) {
+            var popup = document.getElementById('popup');
+            popup.textContent = message;
+            popup.classList.add('show');
+            setTimeout(function() {
+               popup.classList.remove('show');
+            }, 3000);
+         }
+
+         document.getElementById('addToCartButton').addEventListener('click', function() {
+            var size = document.getElementById('sizeSelect').value;
+            var product = {
+               name: "Maillot Concept Brésil 2023/2024",
+               size: size,
+               price: 22000,
+               image: "../assets/img/maillot7.JPG"
+            };
+            var cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            showPopup('Produit ajouté au panier');
+         });
+
+         document.getElementById('whatsappButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            var size = document.getElementById('sizeSelect').value;
+            var message = "Bonjour! Je souhaite commander ceci : Maillot Concept Brésil 2023/2024 en taille '" + size + "'";
+            var url = "https://wa.me/+2250787270821?text=" + encodeURIComponent(message) + "%0A%0A" + encodeURIComponent(window.location.href);
+            window.location.href = url;
+         });
+         // Mobile menu functionality
+         const navMenu = document.getElementById('nav-menu'),
+               navToggle = document.getElementById('nav-toggle'),
+               navClose = document.getElementById('nav-close')
+
+         // Menu Show
+         if(navToggle) {
+            navToggle.addEventListener('click', () => {
+               navMenu.classList.add('show-menu')
+            })
+         }
+
+         // Menu Hidden
+         if(navClose) {
+            navClose.addEventListener('click', () => {
+               navMenu.classList.remove('show-menu')
+            })
+         }
+      </script>
+   </body>
+</html>
